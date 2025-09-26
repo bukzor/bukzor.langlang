@@ -1,0 +1,14 @@
+[package]
+name = "langlang-common"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+capnp = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+[build-dependencies]
+capnpc = { workspace = true }

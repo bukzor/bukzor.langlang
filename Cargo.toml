@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "crates/parser",
+    "crates/typechecker",
+    "crates/fomega-encoder",
+    "crates/evaluator",
+    "crates/cli",
+    "crates/common"
+]
+
+[workspace.dependencies]
+# Cap'n Proto
+capnp = "0.18"
+capnpc = "0.18"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# CLI
+clap = { version = "4.0", features = ["derive"] }
+
+# Async/concurrency
+tokio = { version = "1.0", features = ["full"] }
+
+# Tree-sitter (for parser crate)
+tree-sitter = "0.20"
+tree-sitter-python = "0.20"
+tree-sitter-haskell = "0.14"
+
+# Testing
+proptest = "1.0"
